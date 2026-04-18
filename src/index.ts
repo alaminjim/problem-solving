@@ -46,3 +46,63 @@ function arrayOfSum(sumArray: number[]) {
 
   return sum;
 }
+
+function countVowels(value: string): number {
+  let count = 0;
+  const vowels = "aeiouAEIOU";
+
+  for (let i = 0; i < value.length; i++) {
+    if (vowels.includes(value[i]!)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+function factorial(value: number): number {
+  let result = 1;
+
+  for (let i = 1; i <= value; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+function getEvenNumbers(evenNum: number[]): number[] {
+  let result: number[] = [];
+
+  for (let i = 0; i < evenNum.length; i++) {
+    if (evenNum[i]! && evenNum[i]! % 2 === 0) {
+      result.push(evenNum[i]!);
+    }
+  }
+
+  return result;
+}
+
+function fibonacci(value: number): number[] {
+  if (value === 1) return [0];
+
+  let result = [0, 1];
+
+  for (let i = 2; i < value; i++) {
+    let next = result[i - 1]! + result[i - 2]!;
+    result.push(next);
+  }
+
+  return result;
+}
+
+function findMin(findNum: number[]): number {
+  let min = findNum[0];
+
+  for (let i = 1; i < findNum.length; i++) {
+    if (findNum[i]! < min!) {
+      min = findNum[i];
+    }
+  }
+
+  return min!;
+}
